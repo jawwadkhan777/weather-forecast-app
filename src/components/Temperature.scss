@@ -1,0 +1,18 @@
+.weather {
+    &_temperature {
+        display: flex;
+        justify-content: center;
+        color: #101820;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 4.5rem;
+        font-weight: bold;
+    }
+    &_city {
+        display: flex;
+        justify-content: center;
+        color: #101820;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,19 @@
+.wind {
+    display: flex;
+    gap: 15px;
+    margin-left: 70px;
+    &_details {
+        text-align: left;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        // color: #101820;
+        color: #52b1d2;
+        &_speed {
+            font-size: 1.35rem;
+            word-spacing: -5px;
+        }
+        &_tag {
+            font-size: 0.9rem;
+        }
+    }
+}
