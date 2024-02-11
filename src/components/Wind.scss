@@ -17,3 +17,19 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 650px) {
+    .wind {
+        gap: 10px;
+        margin-left: 45px;
+        &_details {
+            &_speed {
+                font-size: 1.2rem;
+            }
+            &_tag {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

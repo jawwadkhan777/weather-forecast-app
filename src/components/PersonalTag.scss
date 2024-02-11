@@ -8,6 +8,14 @@
     cursor: pointer;
     a {
         color: #52b1d2;
-        text-decoration: none;
+        text-decoration: underline wavy;
+        text-underline-position: under;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .personal-tag {
+        font-size: 0.8rem;
     }
 }

@@ -10,13 +10,28 @@
         text-align: left;
         font-family: 'Courier New', Courier, monospace;
         font-weight: bold;
-        // color: #101820;
         color: #52b1d2;
         &_rate {
             font-size: 1.35rem;
         }
         &_tag {
             font-size: 0.9rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .humidity {
+        gap: 10px;
+        margin: 50px 0px 10px 45px;
+        &_details {
+            &_rate {
+                font-size: 1.2rem;
+            }
+            &_tag {
+                font-size: 0.8rem;
+            }
         }
     }
 }
