@@ -1,0 +1,114 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 5px solid #fee715;
+    padding: 1rem 2rem;
+
+    &_left {
+        >span {
+            color: #fee715;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.7rem;
+            border-bottom: 2px dashed #fee715;
+        }
+
+        &_personal {
+            display: flex;
+            gap: 1rem;
+            padding-top: 1.5rem;
+            >img {
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                object-fit: cover;
+            }
+            >span {
+                color: #fee715;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 1.7rem;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                word-spacing: -5px;
+            }
+        }
+    }
+
+    &_right {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        // align-items: center;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .footer {
+        border-top: 3px solid #fee715;
+        padding: 1rem 1rem;
+    
+        &_left {
+            >span {
+                font-size: 1.2rem;
+                border-bottom: 1.55px dashed #fee715;
+            }
+    
+            &_personal {
+                gap: 0.8rem;
+                padding-top: 1rem;
+                >img {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 70px;
+                }
+                >span {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    
+        &_right {
+            gap: 0.7rem;
+        }
+    }        
+}
+
+.logos {
+    color: #fee715;
+    cursor: grab;
+}
+.logos:hover {
+    color: #52b1d2;
+    transition: all 0.5s;
+}
+
+@media only screen and (max-width: 450px) {
+    .footer {
+        border-top: 2px solid #fee715;
+    
+        &_left {
+            >span {
+                font-size: 0.9rem;
+                border-bottom: 1.2px dashed #fee715;
+            }
+    
+            &_personal {
+                gap: 0.6rem;
+                padding-top: 1rem;
+                >img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 70px;
+                }
+                >span {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    
+        &_right {
+            gap: 0.4rem;
+        }
+    }        
+}

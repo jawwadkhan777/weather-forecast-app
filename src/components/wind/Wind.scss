@@ -1,18 +1,16 @@
-.humidity {
+.wind {
     display: flex;
-    // align-items: flex-start;
-    // margin: auto;
     gap: 15px;
-    margin: 50px 0px 10px 70px;
-
-
+    margin-left: 70px;
     &_details {
         text-align: left;
         font-family: 'Courier New', Courier, monospace;
         font-weight: bold;
+        // color: #101820;
         color: #52b1d2;
-        &_rate {
+        &_speed {
             font-size: 1.35rem;
+            word-spacing: -5px;
         }
         &_tag {
             font-size: 0.9rem;
@@ -22,15 +20,30 @@
 
 
 @media only screen and (max-width: 650px) {
-    .humidity {
+    .wind {
         gap: 10px;
-        margin: 50px 0px 10px 45px;
+        margin-left: 45px;
         &_details {
-            &_rate {
+            &_speed {
                 font-size: 1.2rem;
             }
             &_tag {
                 font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .wind {
+        gap: 10px;
+        margin-left: 22px;
+        &_details {
+            &_speed {
+                font-size: 1.1rem;
+            }
+            &_tag {
+                font-size: 0.75rem;
             }
         }
     }

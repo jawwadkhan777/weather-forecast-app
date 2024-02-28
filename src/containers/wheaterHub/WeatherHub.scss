@@ -1,14 +1,13 @@
-.App {
-  text-align: center;
-  &_container {
+.weatherHub {
     width: 600px;
     height: 550px;
     background: #fee715;
-    opacity: 0.8;
+    opacity: 0.9;
     margin: auto;
     margin-top: 50px;
+    margin-bottom: 50px;
     padding: 5px;
-    border-radius: 15px;
+    border-radius: 10px;
     &_search-bar {
       display: flex;
       justify-content: center;
@@ -32,13 +31,11 @@
         font-weight: 700;
       }
     }
-  } 
 }
 
-
 @media only screen and (max-width: 650px) {
-  .App_container {
-    margin-top: 100px;
+  .weatherHub {
+    // margin-top: 100px;
     width: 400px;
     height: 500px;
     &_search-bar {
@@ -47,6 +44,24 @@
       input {
         font-size: 0.9rem;
         width: 225px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .weatherHub {
+    // margin-top: 100px;
+    width: 300px;
+    height: 475px;
+    &_search-bar {
+      width: 250px;
+      height: 45px;
+      input {
+        font-size: 0.9rem;
+        width: 225px;
+        width: 190px;
+        height: 20px;
       }
     }
   }

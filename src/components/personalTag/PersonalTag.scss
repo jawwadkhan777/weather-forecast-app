@@ -19,3 +19,10 @@
         font-size: 0.8rem;
     }
 }
+
+@media only screen and (max-width: 450px) {
+    .personal-tag {
+        font-size: 0.7rem;
+        margin-right: 22px;
+    }
+}

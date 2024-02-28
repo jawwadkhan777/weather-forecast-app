@@ -1,13 +1,17 @@
-import "./WeatherApp.scss";
-import Temperature from "./components/Temperature";
-import Humidity from "./components/Humidity";
-import Wind from "./components/Wind";
+import React from "react";
+import "./WeatherHub.scss";
+import Temperature from "../../components/temperature/Temperature";
+import Humidity from "../../components/humidity/Humidity";
+import Wind from "../../components/wind/Wind";
 import { useRef, useState } from "react";
 import { MdSearch } from "react-icons/md";
 import { WiNa } from "react-icons/wi";
-import PersonalTag from "./components/PersonalTag";
+import PersonalTag from "../../components/personalTag/PersonalTag";
 
-function WeatherApp() {
+
+
+
+const WheatherHub = () => {
   const inputRef = useRef(null);
   const [tempData, setTempData] = useState("0");
   const [locationData, setLocationData] = useState("Search Location");
@@ -17,7 +21,7 @@ function WeatherApp() {
     <WiNa size={150} style={{ color: "#101820" }} />
   );
 
-  const apiKey=process.env.REACT_APP_WEATHER_API_KEY;
+  const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 
   const searchHandle = async () => {
     const element = inputRef.current;
@@ -26,7 +30,7 @@ function WeatherApp() {
       return 0;
     }
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${element.value}&units=Metric&appid=${apiKey}`;
-    
+
     try {
       const response = await fetch(url);
       const data = await response.json();
@@ -42,32 +46,30 @@ function WeatherApp() {
   };
 
   return (
-    <div className="App">
-      <div className="App_container">
-        <div className="App_container_search-bar">
-          <input
-            type="text"
-            className="input"
-            placeholder="search"
-            ref={inputRef}
-          />
-          <MdSearch
-            size={35}
-            style={{ color: "#FEE715", cursor: "pointer" }}
-            onClick={searchHandle}
-          />
-        </div>
-        <Temperature
-          tempData={tempData}
-          locationData={locationData}
-          image={image}
+    <div className="weatherHub">
+      <div className="weatherHub_search-bar">
+        <input
+          type="text"
+          className="input"
+          placeholder="search"
+          ref={inputRef}
         />
-        <Humidity humidityData={humidityData} />
-        <Wind windData={windData} />
-        <PersonalTag />
+        <MdSearch
+          size={35}
+          style={{ color: "#FEE715", cursor: "pointer" }}
+          onClick={searchHandle}
+        />
       </div>
+      <Temperature
+        tempData={tempData}
+        locationData={locationData}
+        image={image}
+      />
+      <Humidity humidityData={humidityData} />
+      <Wind windData={windData} />
+      <PersonalTag />
     </div>
   );
-}
+};
 
-export default WeatherApp;
+export default WheatherHub;

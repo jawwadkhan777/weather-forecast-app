@@ -1,0 +1,70 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+  padding-top: 0.5rem;
+  border-bottom: 5px solid #fee715;
+  &_logo {
+    cursor: grab;
+  }
+
+  &_pages {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+
+    &_list {
+      &_item {
+        color: #fee715;
+        text-decoration: none;
+        word-spacing: -2px;
+        cursor: grab;
+        &:hover {
+          color: #52b1d2;
+          // border-bottom: 3px solid #52b1d2;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 650px) {
+  .header {
+    padding: 0rem 1rem;
+    border-bottom: 3px solid #fee715;
+    &_logo {
+      >img {
+        width: 150px;
+      }
+    }
+  
+    &_pages {
+      gap: 1.5rem;
+      font-weight: 200;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .header {
+    padding: 0.5rem 1rem 0rem 1rem;
+    border-bottom: 2px solid #fee715;
+    &_logo {
+      >img {
+        width: 120px;
+      }
+    }
+    &_pages {
+      gap: 1rem;
+      font-weight: 200;
+      font-size: 0.75rem;
+    }
+  }
+}
